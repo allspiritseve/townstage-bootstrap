@@ -8,8 +8,8 @@ Gem::Specification.new do |spec|
   spec.version       = Townstage::VERSION
   spec.authors       = ["Cory Kaufman-Schofield"]
   spec.email         = ["cory@corykaufman.com"]
-  spec.description   = "Townstage shared assets"
-  spec.summary       = "Townstage shared assets"
+  spec.description   = "Shared assets for Townstage and Backstage"
+  spec.summary       = "Shared assets for Townstage and Backstage"
   spec.homepage      = "https://townstage.com"
   spec.license       = "MIT"
 
