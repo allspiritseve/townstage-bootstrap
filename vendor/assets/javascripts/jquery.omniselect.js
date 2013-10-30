@@ -1,5 +1,3 @@
-console.log('Hello from the gem!');
-
 !function($, window) {
   var omniselect = function(spec) {
     var plugin = {}, data = { visible: false };
@@ -32,8 +30,6 @@ console.log('Hello from the gem!');
       resultsClassSelector = '.' + options.resultsClass.split(' ').join('.');
 
     var init = function() {
-      console.log('Init');
-      set('index', 0);
       $results.insertAfter($input);
       bind();
     };
@@ -41,7 +37,6 @@ console.log('Hello from the gem!');
     var show = function() {
       var visible = get('visible');
       if (!visible) {
-        console.log('Show');
         set('visible', true);
         $results.show();
       }
@@ -50,7 +45,6 @@ console.log('Hello from the gem!');
     var hide = function() {
       var visible = get('visible');
       if (visible) {
-        console.log('Hide');
         set('visible', false);
         set('index', 0);
         $results.hide();
@@ -62,25 +56,23 @@ console.log('Hello from the gem!');
         .on('keydown.omniselect', keydown);
       $results.on('click.omniselect', 'li', click)
         .on('mouseenter.omniselect', 'li', mouseenter);
-      $.subscribe('omniselect:results:changed', resultsChanged);
-      $.subscribe('omniselect:index:changed', indexChanged);
+      $input.on('omniselect:results:changed', resultsChanged)
+        .on('omniselect:index:changed', indexChanged);
     };
 
-    var unbind = function() {
-      return;
-      console.log('Unbind');
+    var destroy = function() {
       $input.off('keydown.omniselect').off('keyup.omniselect')
       $results.off('click.omniselect', 'li')
         .off('mouseenter.omniselect', 'li');
-      $.unsubscribe('omniselect:results:changed');
-      $.unsubscribe('omniselect:index:changed');
+      $input.off('omniselect:results:changed')
+        .off('omniselect:index:changed');
     };
 
     var set = function(key, value) {
       var oldValue = data[key];
       data[key] = value;
       if (value != oldValue) {
-        $.publish('omniselect:' + key + ':changed', [value, oldValue]);
+        $input.trigger('omniselect:' + key + ':changed', [value, oldValue]);
       }
     };
 
@@ -103,12 +95,7 @@ console.log('Hello from the gem!');
       show();
       $results.html(renderedItems);
       set('renderedItems', renderedItems);
-      var index = get('index');
-      set('index', -1);
-      if (!(index < renderedItems.length)) {
-        index = renderedItems.length - 1;
-      }
-      set('index', Math.max(index, 0));
+      set('index', 0)
     };
 
     var indexChanged = function() {
@@ -127,11 +114,7 @@ console.log('Hello from the gem!');
     };
 
     var renderItem = options.renderItem || function(item, index) {
-      return '<li class="' + itemClass(item, index) + '" data-omniselect-index="' + index + '"><a>' + itemLabel(item, index) + '</a></li>';
-    };
-
-    plugin.renderAddItem = options.renderAddItem || function(query) {
-      return '<li class="" data-omniselect-add="true"><a>' + query + '</a></li>';
+      return '<li><a href="#" class="item">' + itemLabel(item, index) + '</a></li>';
     };
 
     var hasModifierKey = function(e) {
@@ -161,7 +144,7 @@ console.log('Hello from the gem!');
           case keys.down:
             next(); return;
           case keys.escape:
-            hide(); unbind(); return false;
+            hide(); return false;
           case keys.tab:
           case keys.enter:
             select(); return false;
@@ -181,9 +164,8 @@ console.log('Hello from the gem!');
     };
 
     var select = function() {
-      console.log('select');
       var item = selectedItem();
-      if (fire('omniselect:select', item)) { hide(); unbind(); }
+      if (fire('omniselect:select', item)) { hide(); }
     }
 
     var findItemIndex = function(id) {
@@ -195,10 +177,6 @@ console.log('Hello from the gem!');
       });
       return itemIndex;
     }
-
-    var itemClass = function(item, index) {
-      return index === currentItemIndex ? options.activeClass : ''
-    };
 
     var itemId = function(item, index) {
       return item;
@@ -248,9 +226,7 @@ console.log('Hello from the gem!');
     }
 
     var next = function() {
-      console.log('Next')
       var index = get('index'), renderedItems = get('renderedItems');
-      console.log('Index', index);
       if (index < renderedItems.length - 1) {
         set('index', index + 1);
       } else if (options.cycle) {
@@ -258,9 +234,9 @@ console.log('Hello from the gem!');
       }
     }
 
-    var fire = function(name, data) {
+    var fire = function(name, eventData) {
       var event = $.Event(name);
-      $input.trigger(event, data);
+      $input.trigger(event, eventData);
       return event.result !== false;
     };
 

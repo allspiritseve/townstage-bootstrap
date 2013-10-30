@@ -3,21 +3,26 @@
 
   var init = function() {
     $(document)
-      .on('click.townstage.dropdown', toggleClass, show)
+      .on('click.townstage.dropdown', toggleClass, toggle)
       .on('click.townstage.dropdown', hide);
   };
 
-  var show = function(e) {
+  var toggle = function(e) {
     var $parent = $(this).parent();
-    $parent.addClass('open');
+    if ($parent.hasClass('open')) {
+      $parent.removeClass('open');
+    } else {
+      $parent.addClass('open');
+    }
     return false;
   };
 
   var hide = function() {
     $(dropdownMenuClass).each(function() {
       var $parent = $(this).parent();  
-      if ($parent.hasClass('open')) { return }
-      $parent.removeClass('open');
+      if ($parent.hasClass('open')) {
+        $parent.removeClass('open');
+      }
     });
   };
 
