@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    townstage (0.0.3)
+    townstage (0.0.4)
       railties
 
 GEM
