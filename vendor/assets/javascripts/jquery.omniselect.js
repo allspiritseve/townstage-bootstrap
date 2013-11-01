@@ -178,11 +178,11 @@
       return itemIndex;
     }
 
-    var itemId = function(item, index) {
+    var itemId = options.itemId || function(item, index) {
       return item;
     };
 
-    var itemLabel = function(item, index) {
+    var itemLabel = options.itemLabel || function(item, index) {
       return item;
     };
 
@@ -196,12 +196,12 @@
         var exactMatch = false;
         results.forEach(function(result) {
           if (result.name == query) { exactMatch = true }
-          result.isAddItem = function() { return false; }
+          result.isAddItem = false;
         });
         if (options.allowAdd && !exactMatch) {
           var addResult = {
-            isAddItem: function() { return true },
-            name: function() { return query }
+            isAddItem: true,
+            name: query
           };
           results.push(addResult);
         }
