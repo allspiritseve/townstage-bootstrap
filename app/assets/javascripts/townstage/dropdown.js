@@ -1,5 +1,5 @@
 !function($) {
-  var toggleClass = '.dropdown-toggle', dropdownMenuClass = '.dropdown-menu';
+  var toggleClass = '.dropdown-toggle', dropdownMenuClass = '.dropdown-nav';
 
   var init = function() {
     $(document)
