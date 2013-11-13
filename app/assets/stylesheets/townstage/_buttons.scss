@@ -10,10 +10,9 @@
   font-size: inherit;
   cursor: pointer;
   @include border-radius(2px);
-  &:hover {
+  &:hover, li.active & {
     color: #fff;
     text-decoration: none;
     background-color: darken(#49f, 10%);
   }
 }
-

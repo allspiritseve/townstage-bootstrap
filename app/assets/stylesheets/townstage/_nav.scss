@@ -4,6 +4,7 @@
     margin-bottom: 20px;
   }
   a {
+    vertical-align: top;
     color: rgba(#fff, .9);
     line-height: 20px;
     padding: 10px;
@@ -24,7 +25,7 @@
   display: inline-block;
   li {
     display: inline-block;
-    &.open > a, &.open > a:hover {
+    &.active a, &.open > a, &.open > a:hover {
       color: rgba(#fff, .9);
       background-color: rgba(#000, .15);
       @include box-shadow(inset 0 2px 6px rgba(#000, 0.2));
@@ -39,10 +40,13 @@
   padding: 4px;
   display: none;
   position: absolute;
-  top: 50px;
+  top: 43px;
   z-index: 1000;
   @include border-radius(5px);
   @include box-shadow(0 5px 10px rgba(#000, 0.2));
+  li {
+    width: 100%;
+  }
   .open & {
     display: block;
   }
