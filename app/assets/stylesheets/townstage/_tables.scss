@@ -1,6 +1,7 @@
 table {
   max-width: 100%;
   border-spacing: 0;
+  border-collapse: collapse;
 }
 
 .table {
@@ -26,6 +27,14 @@ thead th {
 
 td.nowrap {
   white-space: nowrap;
+}
+
+td.collapse {
+  white-space: nowrap;
+}
+
+td.expand {
+  width: 100%;
 }
 
 td, th {
