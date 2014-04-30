@@ -4,7 +4,7 @@
   background-color: #999;
   text-align: center;
   padding: 3px 10px;
-  @include border-radius(.25em);
+  border-radius: .25em;
   vertical-align: middle;
   font-size: 14px;
 }

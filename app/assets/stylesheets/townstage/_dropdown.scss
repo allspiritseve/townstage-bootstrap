@@ -1,8 +1,10 @@
 .dropdown {
   position: relative;
+  text-align: left;
 }
 
 .dropdown-toggle {
+  height: 30px;
   img {
     background-color: transparent;
     @include box-shadow(0 1px 1px rgba(#000, .3));
@@ -21,11 +23,22 @@
   }
 }
 
+.navbar a.dropdown-toggle {
+  padding: 5px 20px 5px 14px;
+}
+
 .dropdown-nav {
   .divider {
     height: 1px;
     margin: 5px 0;
     overflow: hidden;
     background-color: #e5e5e5;
+  }
+}
+
+.account-nav {
+  .dropdown-nav {
+    right: 0;
+    left: inherit;
   }
 }
