@@ -21,7 +21,7 @@ textarea, .textarea,
   font-family: Verdana;
   margin-bottom: 5px;
   padding: 4px 8px;
-  @include box-sizing(border-box);
+  box-sizing: border-box;
   &:focus {
     border: solid 1px #49f;
     outline: none;
