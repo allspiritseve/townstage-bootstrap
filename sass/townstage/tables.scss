@@ -1,0 +1,44 @@
+table {
+  max-width: 100%;
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+
+.table {
+  width: 100%;
+  border-spacing: 2px;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+}
+
+th {
+  font-weight: bold;
+}
+
+thead th {
+  border-bottom: solid 2px #ddd;
+}
+
+.table-striped {
+  tr:nth-child(odd) td {
+    background-color: #f9f9f9;
+  }
+}
+
+td.nowrap {
+  white-space: nowrap;
+}
+
+td.collapse {
+  white-space: nowrap;
+}
+
+td.expand {
+  width: 100%;
+}
+
+td, th {
+  padding: 8px;
+  box-sizing: border-box;
+  border-collapse: collapse;
+}

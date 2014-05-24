@@ -1,0 +1,18 @@
+.label {
+  display: inline-block;
+  color: #fff;
+  background-color: #999;
+  text-align: center;
+  padding: 3px 10px;
+  border-radius: .25em;
+  vertical-align: middle;
+  font-size: 14px;
+}
+
+.table .label {
+  display: block;
+}
+
+.published-label {
+  background-color: #5CB85C;
+}

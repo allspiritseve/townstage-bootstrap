@@ -1,0 +1,16 @@
+.button {
+  background-color: #49f;
+  border: none;
+  color: rgba(255, 255, 255, 0.9);
+  display: inline-block;
+  line-height: 30px;
+  margin: 0;
+  height: 30px;
+  padding: 0 10px;
+  font-size: inherit;
+  cursor: pointer;
+  border-radius: 2px; }
+  .button:hover, li.active .button {
+    color: #fff;
+    text-decoration: none;
+    background-color: #117dff; }

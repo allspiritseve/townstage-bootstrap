@@ -1,0 +1,69 @@
+/*
+Syntax error: Undefined variable: "$navbar-color".
+        on line 3 of ./sass/townstage/nav.scss
+
+1: .navbar {
+2:   height: 40px;
+3:   background-color: $navbar-color;
+4:   @media screen and (min-width: 820px) {
+5:     margin-bottom: 20px;
+6:   }
+7:   a {
+8:     vertical-align: top;
+
+Backtrace:
+./sass/townstage/nav.scss:3
+/Users/cory/.gem/ruby/2.0.0/gems/sass-3.3.6/lib/sass/script/tree/variable.rb:49:in `_perform'
+/Users/cory/.gem/ruby/2.0.0/gems/sass-3.3.6/lib/sass/script/tree/node.rb:50:in `perform'
+/Users/cory/.gem/ruby/2.0.0/gems/sass-3.3.6/lib/sass/tree/visitors/perform.rb:366:in `visit_prop'
+/Users/cory/.gem/ruby/2.0.0/gems/sass-3.3.6/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Users/cory/.gem/ruby/2.0.0/gems/sass-3.3.6/lib/sass/tree/visitors/perform.rb:152:in `block in visit'
+/Users/cory/.gem/ruby/2.0.0/gems/sass-3.3.6/lib/sass/stack.rb:79:in `block in with_base'
+/Users/cory/.gem/ruby/2.0.0/gems/sass-3.3.6/lib/sass/stack.rb:121:in `with_frame'
+/Users/cory/.gem/ruby/2.0.0/gems/sass-3.3.6/lib/sass/stack.rb:79:in `with_base'
+/Users/cory/.gem/ruby/2.0.0/gems/sass-3.3.6/lib/sass/tree/visitors/perform.rb:152:in `visit'
+/Users/cory/.gem/ruby/2.0.0/gems/sass-3.3.6/lib/sass/tree/visitors/perform.rb:389:in `block (2 levels) in visit_rule'
+/Users/cory/.gem/ruby/2.0.0/gems/sass-3.3.6/lib/sass/tree/visitors/perform.rb:389:in `map'
+/Users/cory/.gem/ruby/2.0.0/gems/sass-3.3.6/lib/sass/tree/visitors/perform.rb:389:in `block in visit_rule'
+/Users/cory/.gem/ruby/2.0.0/gems/sass-3.3.6/lib/sass/tree/visitors/perform.rb:173:in `with_environment'
+/Users/cory/.gem/ruby/2.0.0/gems/sass-3.3.6/lib/sass/tree/visitors/perform.rb:387:in `visit_rule'
+/Users/cory/.gem/ruby/2.0.0/gems/sass-3.3.6/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Users/cory/.gem/ruby/2.0.0/gems/sass-3.3.6/lib/sass/tree/visitors/perform.rb:152:in `block in visit'
+/Users/cory/.gem/ruby/2.0.0/gems/sass-3.3.6/lib/sass/stack.rb:79:in `block in with_base'
+/Users/cory/.gem/ruby/2.0.0/gems/sass-3.3.6/lib/sass/stack.rb:121:in `with_frame'
+/Users/cory/.gem/ruby/2.0.0/gems/sass-3.3.6/lib/sass/stack.rb:79:in `with_base'
+/Users/cory/.gem/ruby/2.0.0/gems/sass-3.3.6/lib/sass/tree/visitors/perform.rb:152:in `visit'
+/Users/cory/.gem/ruby/2.0.0/gems/sass-3.3.6/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
+/Users/cory/.gem/ruby/2.0.0/gems/sass-3.3.6/lib/sass/tree/visitors/base.rb:52:in `map'
+/Users/cory/.gem/ruby/2.0.0/gems/sass-3.3.6/lib/sass/tree/visitors/base.rb:52:in `visit_children'
+/Users/cory/.gem/ruby/2.0.0/gems/sass-3.3.6/lib/sass/tree/visitors/perform.rb:161:in `block in visit_children'
+/Users/cory/.gem/ruby/2.0.0/gems/sass-3.3.6/lib/sass/tree/visitors/perform.rb:173:in `with_environment'
+/Users/cory/.gem/ruby/2.0.0/gems/sass-3.3.6/lib/sass/tree/visitors/perform.rb:160:in `visit_children'
+/Users/cory/.gem/ruby/2.0.0/gems/sass-3.3.6/lib/sass/tree/visitors/base.rb:36:in `block in visit'
+/Users/cory/.gem/ruby/2.0.0/gems/sass-3.3.6/lib/sass/tree/visitors/perform.rb:180:in `visit_root'
+/Users/cory/.gem/ruby/2.0.0/gems/sass-3.3.6/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Users/cory/.gem/ruby/2.0.0/gems/sass-3.3.6/lib/sass/tree/visitors/perform.rb:151:in `visit'
+/Users/cory/.gem/ruby/2.0.0/gems/sass-3.3.6/lib/sass/tree/visitors/perform.rb:8:in `visit'
+/Users/cory/.gem/ruby/2.0.0/gems/sass-3.3.6/lib/sass/tree/root_node.rb:36:in `css_tree'
+/Users/cory/.gem/ruby/2.0.0/gems/sass-3.3.6/lib/sass/tree/root_node.rb:20:in `render'
+/Users/cory/.gem/ruby/2.0.0/gems/sass-3.3.6/lib/sass/engine.rb:274:in `render'
+/Users/cory/.gem/ruby/2.0.0/gems/sass-3.3.6/lib/sass/plugin/compiler.rb:414:in `update_stylesheet'
+/Users/cory/.gem/ruby/2.0.0/gems/sass-3.3.6/lib/sass/plugin/compiler.rb:189:in `block in update_stylesheets'
+/Users/cory/.gem/ruby/2.0.0/gems/sass-3.3.6/lib/sass/plugin/compiler.rb:186:in `each'
+/Users/cory/.gem/ruby/2.0.0/gems/sass-3.3.6/lib/sass/plugin/compiler.rb:186:in `update_stylesheets'
+/Users/cory/.gem/ruby/2.0.0/gems/sass-3.3.6/lib/sass/plugin.rb:82:in `update_stylesheets'
+/Users/cory/.gem/ruby/2.0.0/gems/sass-3.3.6/lib/sass/plugin.rb:54:in `check_for_updates'
+/Users/cory/.gem/ruby/2.0.0/gems/sass-3.3.6/lib/sass/plugin/rack.rb:51:in `call'
+/Users/cory/.gem/ruby/2.0.0/gems/puma-2.8.2/lib/puma/rack_patch.rb:13:in `call'
+/Users/cory/.gem/ruby/2.0.0/gems/sinatra-1.4.5/lib/sinatra/base.rb:217:in `call'
+/Users/cory/.gem/ruby/2.0.0/gems/puma-2.8.2/lib/puma/configuration.rb:71:in `call'
+/Users/cory/.gem/ruby/2.0.0/gems/puma-2.8.2/lib/puma/server.rb:490:in `handle_request'
+/Users/cory/.gem/ruby/2.0.0/gems/puma-2.8.2/lib/puma/server.rb:361:in `process_client'
+/Users/cory/.gem/ruby/2.0.0/gems/puma-2.8.2/lib/puma/server.rb:254:in `block in run'
+/Users/cory/.gem/ruby/2.0.0/gems/puma-2.8.2/lib/puma/thread_pool.rb:92:in `call'
+/Users/cory/.gem/ruby/2.0.0/gems/puma-2.8.2/lib/puma/thread_pool.rb:92:in `block in spawn_thread'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Syntax error: Undefined variable: \"$navbar-color\".\A         on line 3 of ./sass/townstage/nav.scss\A \A 1: .navbar {\A 2:   height: 40px;\A 3:   background-color: $navbar-color;\A 4:   @media screen and (min-width: 820px) {\A 5:     margin-bottom: 20px;\A 6:   }\A 7:   a {\A 8:     vertical-align: top;"; }

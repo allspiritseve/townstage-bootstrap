@@ -1,0 +1,82 @@
+html {
+  font-size: 16px;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+body {
+  margin: 0;
+  font: 16px Helvetica, sans-serif;
+}
+
+a {
+  text-decoration: none;
+  &:active,
+  &:hover {
+    outline: 0;
+    text-decoration: underline;
+  }
+}
+
+b,
+strong {
+  font-weight: bold;
+}
+
+small {
+  font-size: .8em;
+}
+
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+input {
+  line-height: normal;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+td,
+th {
+  padding: 0;
+}
+
+*,
+*:before,
+*:after {
+  @include box-sizing(border-box);
+}
+
+input,
+button,
+select,
+textarea {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+img {
+  vertical-align: middle;
+}
+
+hr {
+  border: 0;
+  border-top: 1px solid $hr-border;
+}

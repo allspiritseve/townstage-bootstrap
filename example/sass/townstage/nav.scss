@@ -1,0 +1,77 @@
+.navbar {
+  height: 40px;
+  background-color: $navbar-color;
+  @media screen and (min-width: 820px) {
+    margin-bottom: 20px;
+  }
+  a {
+    vertical-align: top;
+    color: rgba(#fff, .9);
+    line-height: 20px;
+    padding: 10px;
+    &:hover {
+      color: #fff;
+      text-decoration: none;
+      background-color: rgba(#fff, .1);
+    }
+  }
+}
+
+.mark {
+  font-size: 18px;
+  margin-right: 10px;
+}
+
+.nav {
+  display: inline-block;
+  li {
+    display: inline-block;
+    &.active a, &.open > a, &.open > a:hover {
+      color: rgba(#fff, .9);
+      background-color: rgba(#000, .15);
+      box-shadow: 0 2px 6px rgba(#000, 0.2) inset;
+    }
+  }
+}
+
+.dropdown-nav {
+  background-color: #fff;
+  border: solid 1px rgba(#000, .2);
+  min-width: 160px;
+  padding: 4px;
+  display: none;
+  position: absolute;
+  top: 43px;
+  z-index: 1000;
+  border-radius: 5px;
+  box-shadow: 0 5px 10px rgba(#000, 0.2);
+  li {
+    width: 100%;
+  }
+  .open & {
+    display: block;
+  }
+  a {
+    color: #333;
+    display: block;
+    border-radius: 2px;
+    padding: 3px 10px;
+    line-height: 20px;
+    &:hover {
+      color: #fff;
+      background-color: $navbar-hover-color;
+    }
+  }
+}
+
+.main-nav {
+  display: inline-block;
+  text-align: left;
+  width: 50%;
+}
+
+.account-nav {
+  display: inline-block;
+  width: 50%;
+  text-align: right;
+}

@@ -4,12 +4,12 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'townstage/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "townstage"
+  spec.name          = "townstage-bootstrap"
   spec.version       = Townstage::VERSION
   spec.authors       = ["Cory Kaufman-Schofield"]
   spec.email         = ["cory@corykaufman.com"]
-  spec.description   = "Shared assets for Townstage and Backstage"
-  spec.summary       = "Shared assets for Townstage and Backstage"
+  spec.description   = "Shared assets for Townstage Productions projects"
+  spec.summary       = "Shared assets for Townstage Productions projects"
   spec.homepage      = "https://townstage.com"
   spec.license       = "MIT"
 
@@ -21,6 +21,7 @@ Gem::Specification.new do |spec|
 
   spec.add_dependency 'railties'
 
-  spec.add_development_dependency "bundler", "~> 1.3"
+  spec.add_development_dependency "bundler"
   spec.add_development_dependency "rake"
+  spec.add_development_dependency "puma"
 end

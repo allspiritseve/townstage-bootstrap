@@ -1,0 +1,18 @@
+source 'https://rubygems.org'
+
+gem 'sinatra'
+
+gem 'bourbon'
+gem 'debugger'
+gem 'guard'
+gem 'guard-minitest'
+gem 'minitest'
+gem 'minitest-colorize'
+gem 'minitest-reporters'
+gem 'puma'
+gem 'rack-contrib'
+gem 'rake'
+gem 'sass'
+gem 'sinatra-contrib'
+gem 'sinatra-flash'
+gem 'townstage-bootstrap', path: './../'
