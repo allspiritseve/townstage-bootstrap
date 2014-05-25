@@ -1,12 +1,12 @@
-# Townstage
+# Townstage Bootstrap
 
-TODO: Write a gem description
+Shared assets for Townstage Productions projects.
 
 ## Installation
 
 Add this line to your application's Gemfile:
 
-    gem 'townstage'
+    gem 'townstage-bootstrap'
 
 And then execute:
 
@@ -14,11 +14,15 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install townstage
+    $ gem install townstage-bootstrap
 
 ## Usage
 
 TODO: Write usage instructions here
+
+## Inspiration
+
+As I build more and more side projects, I end up wanting to reuse bits and pieces from other sites I've done. It gets exhausting trying to give each project its own unique look, but instead of using something like Twitter Bootstrap I've decided to start compiling my *own* bootstrap, with styles that make sense to me. Ideally, this repo can be used by projects in any language, whether installed as a gem in Ruby projects or rsynced from Github.
 
 ## Contributing
 
