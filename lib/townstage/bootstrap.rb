@@ -1,6 +1,6 @@
 require 'townstage/bootstrap/version'
 
-module Townstage
-  module Bootstrap
-  end
+module Townstage::Bootstrap
 end
+
+require 'townstage/bootstrap/rails' if defined?(Rails)

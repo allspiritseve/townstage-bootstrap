@@ -1,7 +1,7 @@
 module Townstage::Bootstrap
   class Engine < ::Rails::Engine
-    config.after_initialize do
-      Rails.application.config.assets.paths << File.expand_path('.', File.dirname(__FILE__))
+    initializer :assets do |config|
+      Rails.application.config.assets.paths << root.join('sass')
     end
   end
 end
