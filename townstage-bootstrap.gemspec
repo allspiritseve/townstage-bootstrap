@@ -5,7 +5,7 @@ require 'townstage/bootstrap/version'
 
 Gem::Specification.new do |spec|
   spec.name          = "townstage-bootstrap"
-  spec.version       = Townstage::VERSION
+  spec.version       = Townstage::Bootstrap::VERSION
   spec.authors       = ["Cory Kaufman-Schofield"]
   spec.email         = ["cory@corykaufman.com"]
   spec.description   = "Shared assets for Townstage Productions projects"

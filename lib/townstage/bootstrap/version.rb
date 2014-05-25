@@ -1,3 +1,5 @@
 module Townstage
-  VERSION = "0.0.11"
+  module Bootstrap
+    VERSION = "0.0.12"
+  end
 end
