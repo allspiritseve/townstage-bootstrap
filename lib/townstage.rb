@@ -1,6 +1,4 @@
-require "townstage/version"
+require 'townstage/bootstrap'
 
 module Townstage
-  class Engine < ::Rails::Engine
-  end
 end
