@@ -6,6 +6,7 @@ html {
 body {
   margin: 0;
   font: 16px Helvetica, sans-serif;
+  box-sizing: border-box;
 }
 
 a {
@@ -60,7 +61,7 @@ th {
 *,
 *:before,
 *:after {
-  @include box-sizing(border-box);
+  box-sizing: inherit;
 }
 
 input,

@@ -75,3 +75,18 @@
   width: 50%;
   text-align: right;
 }
+
+.navbar {
+  .container {
+    position: relative;
+  }
+}
+
+.main-nav {
+  width: auto;
+}
+
+.account-nav {
+  position: absolute;
+  right: 0;
+}
