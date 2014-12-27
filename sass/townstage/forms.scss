@@ -51,13 +51,13 @@ input[type="radio"] {
     display: inline-block;
     font-weight: normal;
     line-height: 1em;
+    vertical-align: middle;
   }
 }
 
 label, legend {
   display: block;
   font-weight: bold;
-  padding-bottom: 5px;
 }
 
 input {

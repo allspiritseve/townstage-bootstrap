@@ -3,7 +3,7 @@ source 'https://rubygems.org'
 gem 'sinatra'
 
 gem 'bourbon'
-gem 'debugger'
+gem 'byebug'
 gem 'guard'
 gem 'guard-minitest'
 gem 'minitest'
