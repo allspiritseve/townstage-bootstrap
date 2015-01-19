@@ -42,3 +42,12 @@ td, th {
   box-sizing: border-box;
   border-collapse: collapse;
 }
+
+tr[data-link-to] {
+  &:hover {
+    cursor: pointer;
+    td {
+      background-color: #f3f3f9;
+    }
+  }
+}
